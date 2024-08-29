@@ -66,8 +66,10 @@ function App() {
         )}
         <label htmlFor="quantity">Inserisci la quantità totale in grammi</label>
         <input id="quantity" type="number" />
-        <label htmlFor="pricekg">Inserisci il prezzo al chilo</label>
+        <label htmlFor="pricekg">Inserisci il prezzo al chilo in €</label>
+
         <input id="pricekg" type="number" step={0.01} required />
+
         <label htmlFor="stock">Inserisci la quantità consumata in grammi</label>
         <input id="stock" type="number" />
         <div
