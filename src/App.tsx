@@ -33,9 +33,9 @@ function App() {
         showModal={showModal}
         setShowmodal={setShowModal}
         text1={`
-      ${total}€ `}
+      ${total.toFixed(2)}€ `}
         text2={`
-  ${consumed}€`}
+  ${consumed.toFixed(2)}€`}
       />
       <form
         onSubmit={(e) => handleSubmit(e)}
