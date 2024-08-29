@@ -1,9 +1,11 @@
 import { useState } from "react";
 import "./App.css";
+import Dialog from "./components/Dialog";
 
 function App() {
   const [total, setTotal] = useState<number>(0);
   const [consumed, setConsumed] = useState<number>(0);
+  const [showModal, setShowModal] = useState<boolean>(false);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -19,18 +21,22 @@ function App() {
     setTotal(total);
     setConsumed(consumed);
     // const costFinal = cost - costStock;
-    // dopo total vai a capo
-    alert(`Il costo totale è 
-      ${total}€ ,
 
-  Il costo della quantità consumata è 
-  ${consumed}€`);
+    setShowModal(true);
   };
 
   const prevResultConditopn = !!total || !!consumed;
 
   return (
     <>
+      <Dialog
+        showModal={showModal}
+        setShowmodal={setShowModal}
+        text1={`
+      ${total}€ `}
+        text2={`
+  ${consumed}€`}
+      />
       <form
         onSubmit={(e) => handleSubmit(e)}
         style={{
