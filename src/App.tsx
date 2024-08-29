@@ -67,25 +67,11 @@ function App() {
         <div
           style={{
             display: "flex",
+            flexDirection: "column",
             gap: "1rem",
           }}
         >
-          <button
-            style={{
-              padding: "0.5rem 1rem",
-              backgroundColor: "red",
-              color: "white",
-              border: "none",
-              borderRadius: "0.5rem",
-            }}
-            onClick={() => {
-              setTotal(0);
-              setConsumed(0);
-            }}
-            type="reset"
-          >
-            reset
-          </button>
+          {" "}
           <button
             type="submit"
             style={{
@@ -97,6 +83,23 @@ function App() {
             }}
           >
             calcola
+          </button>
+          <button
+            style={{
+              padding: "0.5rem 1rem",
+              backgroundColor: "red",
+              color: "white",
+              border: "none",
+              borderRadius: "0.5rem",
+              width: "10rem",
+            }}
+            onClick={() => {
+              setTotal(0);
+              setConsumed(0);
+            }}
+            type="reset"
+          >
+            reset
           </button>
         </div>
       </form>
