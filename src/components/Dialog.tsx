@@ -40,9 +40,13 @@ const Dialog: React.FC<DialogProps> = ({
       >
         <h2>Risultato</h2>
         <p>Il costo totale è : </p>
-        <span>{text1}</span>
+        <span>
+          <strong>{text1}</strong>
+        </span>
         <p>Il costo della quantità consumata è : </p>
-        <span>{text2}</span>
+        <span>
+          <strong>{text2}</strong>
+        </span>
         <br />
         <button
           style={{
